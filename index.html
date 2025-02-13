@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profuse Productions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 50px 20px;
+            background: linear-gradient(to right, #000, #222);
+            animation: fadeInDown 1.5s;
+            border-bottom: 2px solid white;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        .content {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .contacts {
+            background: #111;
+            padding: 30px;
+            margin-top: 20px;
+            border-top: 2px solid white;
+        }
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+            border-bottom: 2px solid transparent;
+        }
+        a:hover {
+            text-decoration: none;
+            border-bottom: 2px solid white;
+        }
+        .wow {
+            visibility: hidden;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="wow fadeInDown">
+        <h1>Profuse Productions</h1>
+        <p>Premium DJ Services & Equipment Rental</p>
+    </header>
+    
+    <section class="content wow fadeIn">
+        <h2>About Us</h2>
+        <p>Profuse Productions delivers world-class DJ services, high-quality sound systems, and curated music experiences tailored for any event. Our passion is to create an atmosphere that keeps the energy alive all night.</p>
+    </section>
+    
+    <section class="contacts wow fadeIn">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@profuseproductions.com">info@profuseproductions.com</a></p>
+        <p>AJ: <a href="tel:2066029305">206-602-9305</a></p>
+        <p>Sunny: <a href="tel:2063346921">206-334-6921</a></p>
+        <p>Website: <a href="https://www.profuseproductions.com">www.profuseproductions.com</a></p>
+    </section>
+    
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
