@@ -4,98 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profuse Productions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #000;
-            color: white;
-            text-align: center;
-            overflow-x: hidden;
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #1DB954, 0 0 10px #1DB954; }
+            50% { text-shadow: 0 0 20px #1DB954, 0 0 30px #1DB954; }
+            100% { text-shadow: 0 0 5px #1DB954, 0 0 10px #1DB954; }
         }
-        header {
-            padding: 50px 20px;
-            background: linear-gradient(to right, #000, #222);
-            animation: fadeInDown 1.5s;
-            border-bottom: 2px solid white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo {
-            max-width: 200px;
-            height: auto;
-            animation: fadeIn 2s ease-in-out;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 10px 0 0;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
-        .content {
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        .contacts {
-            background: #111;
-            padding: 30px;
-            margin-top: 20px;
-            border-top: 2px solid white;
-        }
-        a {
-            color: #FFF;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-            border-bottom: 2px solid transparent;
-        }
-        a:hover {
-            text-decoration: none;
-            border-bottom: 2px solid white;
-        }
-        .wow {
-            visibility: hidden;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
-<body>
-    <header class="wow fadeInDown">
-        <img src="logo.png" alt="Profuse Productions Logo" class="logo">
-        <h1>Profuse Productions</h1>
-        <p>Premium DJ Services & Equipment Rental</p>
+<body class="bg-black text-white text-center overflow-x-hidden">
+    <header class="flex flex-col items-center justify-center py-12 bg-gradient-to-r from-black to-gray-900 border-b-2 border-white">
+        <img src="logo.png" alt="Profuse Productions Logo" class="w-48 animate-pulse" data-aos="zoom-in">
+        <h1 class="text-4xl font-bold uppercase mt-4 animate-glow" data-aos="fade-down">Profuse Productions</h1>
+        <p class="text-lg opacity-80" data-aos="fade-up">Sound & Lighting | Premium DJ Services | Equipment Rental | Audio-Video Production</p>
     </header>
     
-    <section class="content wow fadeIn">
-        <h2>About Us</h2>
-        <p>Profuse Productions delivers world-class DJ services, high-quality sound systems, and curated music experiences tailored for any event. Our passion is to create an atmosphere that keeps the energy alive all night.</p>
+    <section class="max-w-3xl mx-auto py-16" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold">About Us</h2>
+        <p class="mt-4 text-lg">Profuse Productions provides state-of-the-art sound and lighting, world-class DJ services, and high-quality audio-video production. Our expert team ensures an unforgettable experience, whether it's a private event, wedding, or large-scale production.</p>
     </section>
     
-    <section class="contacts wow fadeIn">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@profuseproductions.com">info@profuseproductions.com</a></p>
-        <p>AJ: <a href="tel:2066029305">206-602-9305</a></p>
-        <p>Sunny: <a href="tel:2063346921">206-334-6921</a></p>
-        <p>Website: <a href="https://www.profuseproductions.com">www.profuseproductions.com</a></p>
+    <section class="bg-gray-900 py-12 border-t-2 border-white" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold">Contact Us</h2>
+        <p class="mt-4"><a href="mailto:info@profuseproductions.com" class="text-green-400 hover:text-green-300 transition">info@profuseproductions.com</a></p>
+        <p>AJ: <a href="tel:2066029305" class="text-green-400 hover:text-green-300 transition">206-602-9305</a></p>
+        <p>Sunny: <a href="tel:2063346921" class="text-green-400 hover:text-green-300 transition">206-334-6921</a></p>
+        <p><a href="https://www.profuseproductions.com" class="text-green-400 hover:text-green-300 transition">www.profuseproductions.com</a></p>
     </section>
     
     <script>
-        new WOW().init();
+        AOS.init();
     </script>
 </body>
 </html>
