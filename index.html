@@ -10,22 +10,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
         @keyframes glow {
-            0% { text-shadow: 0 0 5px #1DB954, 0 0 10px #1DB954; }
-            50% { text-shadow: 0 0 20px #1DB954, 0 0 30px #1DB954; }
-            100% { text-shadow: 0 0 5px #1DB954, 0 0 10px #1DB954; }
+            0% { text-shadow: 0 0 10px #1DB954, 0 0 20px #1DB954; }
+            50% { text-shadow: 0 0 30px #1DB954, 0 0 40px #1DB954; }
+            100% { text-shadow: 0 0 10px #1DB954, 0 0 20px #1DB954; }
         }
         
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
     </style>
 </head>
 <body class="bg-black text-white text-center overflow-x-hidden">
     <header class="flex flex-col items-center justify-center py-12 bg-gradient-to-r from-black to-gray-900 border-b-2 border-white">
-        <img src="logo.png" alt="Profuse Productions Logo" class="w-48 animate-pulse" data-aos="zoom-in">
-        <h1 class="text-4xl font-bold uppercase mt-4 animate-glow" data-aos="fade-down">Profuse Productions</h1>
+        <img src="logo.png" alt="Profuse Productions Logo" class="w-48 animate-pulse" style="animation: glow 2s infinite alternate, pulse 3s infinite;" data-aos="zoom-in">
+        <h1 class="text-4xl font-bold uppercase mt-4" style="animation: glow 1.5s infinite alternate;" data-aos="fade-down">Profuse Productions</h1>
         <p class="text-lg opacity-80" data-aos="fade-up">Sound & Lighting | Premium DJ Services | Equipment Rental | Audio-Video Production</p>
     </header>
     
