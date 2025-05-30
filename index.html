@@ -1,91 +1,1047 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profuse Productions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Profuse Productions - Premium AVL solutions for weddings, corporate events, private events, and live productions in Seattle"
+    />
+    <title>Profuse Productions | Premium Event Production Services</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px white; }
-            50% { text-shadow: 0 0 30px white; }
-            100% { text-shadow: 0 0 10px white; }
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
         }
+        50% {
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+        }
+        100% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+      .gradient-text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, #ffffff, #cccccc);
+      }
     </style>
-</head>
-<body class="bg-black text-white overflow-x-hidden">
+  </head>
+  <body class="bg-black text-white overflow-x-hidden">
     <!-- Social Media Icons -->
-    <div class="fixed top-4 right-4 flex space-x-4">
-        <a href="https://www.instagram.com/profuseproductions" class="text-white hover:text-gray-400 transition animate__animated animate__fadeInRight"><i class="fab fa-instagram text-2xl"></i></a>
-        <a href="https://www.profuseproductions.com" class="text-white hover:text-gray-400 transition animate__animated animate__fadeInRight"><i class="fas fa-globe text-2xl"></i></a>
+    <div class="fixed top-4 right-4 flex space-x-4 z-50">
+      <a
+        href="https://www.instagram.com/profuseproductions"
+        class="text-white hover:text-gray-400 transition animate__animated animate__fadeInRight"
+      >
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <a
+        href="tel:+12065551234"
+        class="text-white hover:text-gray-400 transition animate__animated animate__fadeInRight"
+      >
+        <i class="fas fa-phone-alt text-2xl"></i>
+      </a>
     </div>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 p-4 flex justify-between items-center z-50 shadow-md">
-        <a href="#" class="flex items-center space-x-2 animate__animated animate__fadeInLeft">
-            <img src="logo.png" alt="Profuse Productions Logo" class="w-12 h-12">
-            <span class="text-xl font-bold text-white">Profuse Productions</span>
-        </a>
-        <ul class="flex space-x-6">
-            <li><a href="#about" class="hover:text-gray-400">About</a></li>
-            <li><a href="#rentals" class="hover:text-gray-400">Rentals</a></li>
-            <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
-        </ul>
+    <nav
+      class="fixed top-0 left-0 w-full bg-black bg-opacity-90 p-4 flex justify-between items-center z-50 shadow-lg"
+    >
+      <a
+        href="#"
+        class="flex items-center space-x-2 animate__animated animate__fadeInLeft"
+      >
+        <img src="logo.png" alt="Profuse Productions Logo" class="w-12 h-12" />
+        <span class="text-xl font-bold gradient-text">
+          Profuse Productions
+        </span>
+      </a>
+      <ul class="hidden md:flex space-x-8">
+        <li>
+          <a href="#about" class="hover:text-gray-400 transition">About</a>
+        </li>
+        <li>
+          <a href="#services" class="hover:text-gray-400 transition"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#rentals" class="hover:text-gray-400 transition">Rentals</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-gray-400 transition">Contact</a>
+        </li>
+      </ul>
+      <button class="md:hidden text-2xl text-white">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <!-- Hero Section -->
-    <header class="flex flex-col items-center justify-center h-screen text-center">
-        <img src="logo.png" alt="Profuse Productions Logo" class="w-48 animate-pulse" style="animation: glow 2s infinite alternate, pulse 3s infinite;" data-aos="zoom-in">
-        <h1 class="text-5xl font-bold animate__animated animate__zoomIn" style="animation: glow 1.5s infinite alternate;">Profuse Productions</h1>
-        <p class="text-lg mt-4 animate__animated animate__fadeInUp">Sound & Lighting | Premium DJ Services | Equipment Rental | Audio-Video Production</p>
-        <a href="#rentals" class="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300 transition animate__animated animate__pulse animate__infinite">Explore Rentals</a>
+    <header
+      class="relative flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-black to-gray-900"
+    >
+      <div
+        class="absolute inset-0 opacity-30"
+        style="
+          background: url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')
+            no-repeat center center/cover;
+        "
+      ></div>
+      <div class="relative z-10 px-4">
+        <img
+          src="logo.png"
+          alt="Profuse Productions Logo"
+          class="w-48 mx-auto animate-pulse"
+          style="animation: glow 2s infinite alternate, pulse 3s infinite"
+          data-aos="zoom-in"
+        />
+        <h1
+          class="text-5xl md:text-7xl font-bold mt-6 mb-4 animate__animated animate__zoomIn"
+          style="animation: glow 1.5s infinite alternate"
+        >
+          <span class="gradient-text"> Profuse Productions </span>
+        </h1>
+        <p
+          class="text-xl md:text-2xl mt-4 animate__animated animate__fadeInUp max-w-2xl mx-auto"
+        >
+          Plan. Produce. Perform.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#contact"
+            class="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300 transition animate__animated animate__pulse animate__infinite"
+          >
+            Book Your Event
+          </a>
+          <a
+            href="#services"
+            class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition"
+          >
+            Explore Services
+          </a>
+        </div>
+      </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="max-w-4xl mx-auto py-16 text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold">About Us</h2>
-        <p class="mt-4 text-lg">Profuse Productions is a Seattle-based company specializing in high-quality audio and video production for a wide range of events, from weddings and corporate functions to live shows and cultural celebrations. With a focus on delivering immersive experiences, we offer professional DJ services, including expertise in Punjabi and Bollywood music, setting us apart in the industry. Founded by passionate sound engineers, we pride ourselves on our attention to detail, personalized service, and commitment to making every event unforgettable. Whether it’s a private party or a large-scale production, we ensure your vision comes to life with clarity and impact.</p>
+    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          <span class="border-b-4 border-white pb-2">About Us</span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg leading-relaxed mb-6">
+              Profuse Productions is Seattle’s premier event production company,
+              delivering top-tier audio, video, and lighting solutions for
+              weddings, corporate gatherings, and cultural celebrations. With
+              specialized expertise in Punjabi and Bollywood entertainment, we
+              create authentic, immersive experiences that resonate deeply with
+              diverse audiences, making every event truly unforgettable.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+              Founded by Sunny and Aj, passionate audio engineers with a deep
+              love for culture and music, Profuse Productions blends technical
+              precision with creative vision. Our team treats every event as a
+              unique masterpiece, crafting unforgettable vibes through
+              crystal-clear sound and immersive lighting that perfectly bring
+              your vision to life.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <span
+                class="px-4 py-2 bg-gray-800 rounded-full text-sm font-medium"
+                >Personalized Service</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-800 rounded-full text-sm font-medium"
+                >Signature Experiences</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-800 rounded-full text-sm font-medium"
+                >Premium Equipment</span
+              >
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+              alt="Event production team"
+              class="w-full h-auto"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <p class="text-xl font-semibold">
+                Crafting unforgettable experiences every time
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">
+          <span class="border-b-4 border-white pb-2"
+            >Our Service Offerings</span
+          >
+        </h2>
+        <p
+          class="text-xl text-center max-w-3xl mx-auto mb-12"
+          data-aos="fade-up"
+        >
+          Every event is unique — our customized production services are
+          designed to elevate your experience and deliver flawless results.
+        </p>
+
+        <!-- Audio Production -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div class="order-1 md:order-2" data-aos="fade-left">
+            <h3 class="text-3xl font-bold mb-4 text-gray-300">
+              Premium Audio Production
+            </h3>
+            <p class="text-lg mb-6">
+              Sound matters. Our high-performance audio systems and advanced
+              mixing gear guarantee flawless clarity, so your message and music
+              are always heard — loud, clear, and powerful
+            </p>
+            <ul class="grid grid-cols-2 gap-4 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Line
+                Array Systems
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Stage
+                Monitors
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Wireless Microphones
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Digital
+                Mixers
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> DJ
+                Equipment
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Acoustic Treatment
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block px-6 py-2 bg-white text-black rounded-lg hover:bg-gray-300 transition"
+            >
+              Request Audio Quote
+            </a>
+          </div>
+          <div class="order-2 md:order-1" data-aos="fade-right">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Audio equipment"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Production -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div data-aos="fade-right">
+            <h3 class="text-3xl font-bold mb-4 text-gray-300">
+              Stunning Video Displays
+            </h3>
+            <p class="text-lg mb-6">
+              Elevate your event with stunning high-resolution LED walls and
+              projection systems — ideal for presentations, live shows, and
+              immersive visual experiences.
+            </p>
+            <ul class="grid grid-cols-2 gap-4 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> LED Video
+                Walls
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Projection Mapping
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Confidence Monitors
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Live
+                Streaming
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Broadcast Solutions
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Custom
+                Installations
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block px-6 py-2 bg-white text-black rounded-lg hover:bg-gray-300 transition"
+            >
+              Discuss Video Needs
+            </a>
+          </div>
+          <div data-aos="fade-left">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1544396821-4dd40b938ad3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80"
+                alt="Video wall display"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lighting -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div class="order-1 md:order-2" data-aos="fade-left">
+            <h3 class="text-3xl font-bold mb-4 text-gray-300">
+              Dynamic Lighting Design
+            </h3>
+            <p class="text-lg mb-6">
+              Illuminate your event with artistry. Our intelligent lighting
+              designs shape every moment — delivering warmth, drama, and
+              unforgettable visual impact.
+            </p>
+            <ul class="grid grid-cols-2 gap-4 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Moving
+                Head Fixtures
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Uplighting
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Laser
+                Effects
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Gobo
+                Projections
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Pixel
+                Mapping
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Atmospheric Effects
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block px-6 py-2 bg-white text-black rounded-lg hover:bg-gray-300 transition"
+            >
+              Design My Lighting
+            </a>
+          </div>
+          <div class="order-2 md:order-1" data-aos="fade-right">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Lighting equipment"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Effects -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h3 class="text-3xl font-bold mb-4 text-gray-300">
+              Special Effects
+            </h3>
+            <p class="text-lg mb-6">
+              From grand entrances to cinematic finales, our custom special
+              effects bring emotion, energy, and elegance to every stage of your
+              event.
+            </p>
+            <ul class="grid grid-cols-2 gap-4 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Dancing
+                on Clouds
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Cold
+                Sparklers
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> CO2
+                Cannons
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Confetti Blasters
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i> Fog &
+                Haze
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-gray-400 mr-2"></i>
+                Pyrotechnics
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block px-6 py-2 bg-white text-black rounded-lg hover:bg-gray-300 transition"
+            >
+              Explore Effects
+            </a>
+          </div>
+          <div data-aos="fade-left">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Special effects"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Rentals Section -->
-    <section id="rentals" class="py-16 text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold">Our Rentals</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 px-6">
-            <div class="bg-gray-800 p-6 rounded-lg" data-aos="zoom-in">
-                <h3 class="text-xl font-bold">Speakers</h3>
-                <p class="mt-2">High-quality audio solutions for events.</p>
+    <section id="rentals" class="py-20 bg-gradient-to-b from-black to-gray-900">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+          <span class="border-b-4 border-white pb-2">Equipment Rentals</span>
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Audio Rentals -->
+          <div
+            class="bg-gray-900 rounded-xl p-6 shadow-lg service-card transition duration-300"
+            data-aos="fade-up"
+          >
+            <div class="text-gray-400 text-4xl mb-4">
+              <i class="fas fa-volume-up"></i>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg" data-aos="zoom-in">
-                <h3 class="text-xl font-bold">Lighting</h3>
-                <p class="mt-2">Professional lighting equipment for ambiance.</p>
+            <h3 class="text-2xl font-bold mb-4">Audio Equipment</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Line Array Systems (RCF, L-Acoustics)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Digital Mixers (QSC, Yamaha & Allen)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Wireless Microphone Systems (Shure, Sennheiser)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Monitor Wedges & IEM Systems</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Subwoofers & Full Range Speakers</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block w-full text-center px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-300 transition"
+            >
+              Rent Audio Gear
+            </a>
+          </div>
+
+          <!-- Lighting Rentals -->
+          <div
+            class="bg-gray-900 rounded-xl p-6 shadow-lg service-card transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-gray-400 text-4xl mb-4">
+              <i class="fas fa-lightbulb"></i>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg" data-aos="zoom-in">
-                <h3 class="text-xl font-bold">DJ Equipment</h3>
-                <p class="mt-2">Premium controllers and turntables.</p>
+            <h3 class="text-2xl font-bold mb-4">Lighting Equipment</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Moving Head Spot/Wash/Beam</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>LED Uplighting & Battens</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Laser & Pixel Mapping Systems</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>DMX Controllers & Consoles</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Atmospheric Fog/Haze Machines</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block w-full text-center px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-300 transition"
+            >
+              Rent Lighting Gear
+            </a>
+          </div>
+
+          <!-- Video Rentals -->
+          <div
+            class="bg-gray-900 rounded-xl p-6 shadow-lg service-card transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-gray-400 text-4xl mb-4">
+              <i class="fas fa-video"></i>
             </div>
+            <h3 class="text-2xl font-bold mb-4">Video Equipment</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>LED Video Walls (2.6mm-6mm pitch)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>4K Projectors & Screens</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Broadcast Cameras & Switchers</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Confidence & Downstage Monitors</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-gray-400 mt-1 mr-2"></i>
+                <span>Live Streaming Encoders</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block w-full text-center px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-300 transition"
+            >
+              Rent Video Gear
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-black">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+          <span class="border-b-4 border-white pb-2">Client Experiences</span>
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-gray-900 rounded-xl p-6" data-aos="fade-up">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="italic mb-6">
+              "Profuse Productions turned our wedding into pure magic. The
+              lighting and sound were flawless, and the ‘dancing on clouds’
+              effect during our first dance left everyone in awe. Our guests are
+              still talking about it!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xl font-bold mr-4"
+              >
+                AK
+              </div>
+              <div>
+                <p class="font-bold">Amarjeet K.</p>
+                <p class="text-gray-400 text-sm">Wedding Client</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-gray-900 rounded-xl p-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="italic mb-6">
+              "As event planners, we've partnered with many AV teams, but
+              Profuse Productions truly stands out. Their expertise in Punjabi
+              music and top-tier equipment brought our cultural festival to life
+              — with crystal-clear sound even at high outdoor volumes."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xl font-bold mr-4"
+              >
+                SP
+              </div>
+              <div>
+                <p class="font-bold">Sunita P.</p>
+                <p class="text-gray-400 text-sm">Event Coordinator</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-gray-900 rounded-xl p-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="italic mb-6">
+              "Profuse Productions brought our corporate gala to life with their
+              incredible video wall and lighting design. Flawless execution and
+              smooth collaboration — we’ll definitely work with them again!!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xl font-bold mr-4"
+              >
+                MR
+              </div>
+              <div>
+                <p class="font-bold">Michael R.</p>
+                <p class="text-gray-400 text-sm">Corporate Client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold">Contact Us</h2>
-        <form action="mailto:info@profuseproductions.com" method="post" enctype="text/plain" class="mt-6 max-w-lg mx-auto animate__animated animate__fadeInUp">
-            <input type="text" name="name" placeholder="Your Name" class="w-full p-3 bg-gray-800 border-none rounded-lg text-white mb-4">
-            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-gray-800 border-none rounded-lg text-white mb-4">
-            <textarea name="message" placeholder="Your Message" class="w-full p-3 bg-gray-800 border-none rounded-lg text-white mb-4"></textarea>
-            <button type="submit" class="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300 transition animate__animated animate__heartBeat animate__infinite">Send Message</button>
-        </form>
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">
+          <span class="border-b-4 border-white pb-2"
+            >Let's Create Something Amazing</span
+          >
+        </h2>
+        <p class="text-xl text-center mb-12" data-aos="fade-up">
+          Ready to elevate your event? Contact us for a free consultation.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div data-aos="fade-right">
+            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="text-gray-400 text-xl mr-4 mt-1">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">Seattle, WA</h4>
+                  <p class="text-gray-300">Serving the Pacific Northwest</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-gray-400 text-xl mr-4 mt-1">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">(206) 334-6921 (206) -9305</h4>
+                  <p class="text-gray-300">Available 9am-9pm daily</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-gray-400 text-xl mr-4 mt-1">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">info@profuseproductions.com</h4>
+                  <p class="text-gray-300">Response within 24 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mt-12 mb-6">
+              Event Details Checklist
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gray-400 mt-1 mr-2"></i>
+                <span>Event date and venue</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gray-400 mt-1 mr-2"></i>
+                <span>Approximate guest count</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gray-400 mt-1 mr-2"></i>
+                <span>Services needed (check our offerings)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gray-400 mt-1 mr-2"></i>
+                <span>Special requirements or vision</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gray-400 mt-1 mr-2"></i>
+                <span>Budget considerations</span>
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-left">
+            <!-- Success Message (hidden by default) -->
+            <div
+              id="successMessage"
+              class="hidden bg-gray-800 text-white p-4 rounded-lg mb-6"
+            >
+              <i class="fas fa-check-circle mr-2"></i> Thank you! Your message
+              has been sent. We'll respond within 24 hours.
+            </div>
+
+            <!-- Error Message (hidden by default) -->
+            <div
+              id="errorMessage"
+              class="hidden bg-gray-800 text-white p-4 rounded-lg mb-6"
+            >
+              <i class="fas fa-exclamation-circle mr-2"></i> There was an error
+              sending your message. Please try again or contact us directly.
+            </div>
+
+            <!-- Google Script Form -->
+            <form id="contactForm" class="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name *"
+                required
+                class="w-full p-3 rounded bg-gray-800 text-white border-none focus:ring-2 focus:ring-white"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email *"
+                required
+                class="w-full p-3 rounded bg-gray-800 text-white border-none focus:ring-2 focus:ring-white"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number *"
+                required
+                class="w-full p-3 rounded bg-gray-800 text-white border-none focus:ring-2 focus:ring-white"
+              />
+              <select
+                name="service"
+                class="w-full p-3 rounded bg-gray-800 text-white border-none focus:ring-2 focus:ring-white"
+                required
+              >
+                <option value="" disabled selected>
+                  Primary Service Needed *
+                </option>
+                <option value="Audio Production">Audio Production</option>
+                <option value="Lighting Design">Lighting Design</option>
+                <option value="Video Production">Video Production</option>
+                <option value="DJ Services">DJ Services</option>
+                <option value="Full Production">Full Production</option>
+                <option value="Equipment Rental">Equipment Rental</option>
+                <option value="Other">Other</option>
+              </select>
+              <textarea
+                name="details"
+                placeholder="Tell us about your event... *"
+                rows="5"
+                required
+                class="w-full p-3 rounded bg-gray-800 text-white border-none focus:ring-2 focus:ring-white"
+              ></textarea>
+              <button
+                type="submit"
+                id="submitButton"
+                class="w-full px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300 transition flex items-center justify-center"
+              >
+                <span id="buttonText">Send Message</span>
+                <span id="spinner" class="hidden ml-2">
+                  <i class="fas fa-circle-notch fa-spin"></i>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Profuse Productions</h3>
+            <p class="text-gray-400">
+              Seattle's premier event production company specializing in audio,
+              video, lighting, and special effects for unforgettable
+              experiences.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-gray-300 transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-gray-300 transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#rentals"
+                  class="text-gray-400 hover:text-gray-300 transition"
+                  >Equipment Rentals</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-gray-300 transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-gray-300 transition"
+                  >Audio Production</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-gray-300 transition"
+                  >Lighting Design</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-gray-300 transition"
+                  >Video Production</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-gray-300 transition"
+                  >Special Effects</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Connect</h3>
+            <div class="flex space-x-4 mb-4">
+              <a
+                href="https://www.instagram.com/profuseproductions"
+                class="text-gray-400 hover:text-gray-300 transition text-xl"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <!-- <a
+                href="https://www.facebook.com"
+                class="text-gray-400 hover:text-gray-300 transition text-xl"
+              >
+                <i class="fab fa-facebook"></i>
+              </a> -->
+              <!-- <a
+                href="https://www.youtube.com"
+                class="text-gray-400 hover:text-gray-300 transition text-xl"
+              >
+                <i class="fab fa-youtube"></i>
+              </a> -->
+            </div>
+            <p class="text-gray-400">
+              Subscribe to our newsletter for updates and special offers.
+            </p>
+            <form class="mt-4 flex">
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="px-4 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-1 focus:ring-white w-full"
+              />
+              <button
+                type="submit"
+                class="bg-white text-black px-4 py-2 rounded-r-lg hover:bg-gray-300 transition"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
+        >
+          <p>&copy; 2023 Profuse Productions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script>
-        AOS.init();
-        gsap.from("h1", { duration: 2, y: -50, opacity: 0, ease: "bounce" });
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector(".md\\:hidden");
+        const mobileMenu = document.querySelector("nav ul");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Enhanced form handling
+        const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+        const submitButton = document.getElementById("submitButton");
+        const buttonText = document.getElementById("buttonText");
+        const spinner = document.getElementById("spinner");
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Show loading state
+            buttonText.textContent = "Sending...";
+            spinner.classList.remove("hidden");
+            submitButton.disabled = true;
+
+            fetch(
+              "https://script.google.com/macros/s/AKfycbyD5LNfdZzy5Z33-iUv1RHG4r4axRUYs1OEkeo3uz_wUNJ2dUMxCPo8qIGiQXp4-x_PwA/exec",
+              {
+                method: "POST",
+                body: new FormData(form),
+              }
+            )
+              .then((response) => {
+                if (response.ok) {
+                  // Show success message
+                  successMessage.classList.remove("hidden");
+                  errorMessage.classList.add("hidden");
+                  form.reset();
+
+                  // Scroll to success message
+                  successMessage.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                } else {
+                  throw new Error("Network response was not ok");
+                }
+              })
+              .catch((error) => {
+                // Show error message
+                errorMessage.classList.remove("hidden");
+                successMessage.classList.add("hidden");
+
+                // Scroll to error message
+                errorMessage.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                });
+              })
+              .finally(() => {
+                // Reset button state
+                buttonText.textContent = "Send Message";
+                spinner.classList.add("hidden");
+                submitButton.disabled = false;
+              });
+          });
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
